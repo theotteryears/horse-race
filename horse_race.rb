@@ -1,6 +1,6 @@
 game_started = "Y"
 horse_names = ["Trevor", "Colin", "Diego", "Alan", "Ian III"]
-user_balance = 20
+user_balance = 100
 winning_bet = 50
 losing_bet = 10
 
