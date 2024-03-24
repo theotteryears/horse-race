@@ -1,11 +1,13 @@
 game_started = "Y"
 horse_names = ["Trevor", "Colin", "Diego", "Alan", "Ian III"]
-user_balance = 100
+user_balance = 20
 winning_bet = 50
 losing_bet = 10
 
 while game_started == "Y" && user_balance.positive?
   # Print welcome message and the horse names
+
+  puts "--------------------------------"
   puts "🎺 🐎 Welcome to the race! 🐎 🎺 \n\n"
 
   # Get user's bet
@@ -39,6 +41,11 @@ while game_started == "Y" && user_balance.positive?
   puts "--------------------------------"
   puts "\nDo you want to play again? [Y/N]"
   game_started = gets.chomp.upcase!
+
+  if user_balance <= 0
+    puts "\n😭 Sorry, you are out of cash! 😭"
+    game_started = "N"
+  end
 
   puts "\nThanks for playing! You are going home with #{user_balance} euro today. Nice work! 💶" if game_started != "Y"
 end
